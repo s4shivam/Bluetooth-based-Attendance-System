@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bluetooth Attendance System</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+
+<body onload="SetUserName()">
+    <section class="wellcome_area clearfix" id="home">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <a class="navbar-brand text-white font-weight-bold" href="#"><i class="fab fa-bluetooth"></i> Bluetooth Attendance</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white font-weight-bold" href="#">About</a>
+              </li>
+            </ul>
+            <div class="text-align-right" id="navbarText">
+              <a href="#" id="loggeduser" class="nav-link text-white font-weight-bold "><i class="far fa-user"></i> User</a>
+            </div>
+            <div class="text-align-right" id="navbarText">
+              <a href="#" class="nav-link text-white font-weight-bold " id="dropTable" onclick="dropTable()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+        <div id="main" class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="wellcome-heading">
+                        <h2>Attendance System</h2>
+                        <h3>Bluetooth</h3>
+                        <p>A smart system for taking Attendance in a class.</p>
+                    </div>
+                    <div class="get-start-area">
+                        <form class="form-inline">
+                            <!-- <input type="text" id="data" class="form-control email" placeholder="No. of presentees."> -->
+                            <!-- <input type="button" class="submit" value="Click to take Attendance." onclick="takeAttendance()"> -->
+                            <button class="px-3 btn btn-dark submit" type="button" id="attend" onclick="takeAttendance()" ><span style="cursor:pointer"><i class="fas fa-address-book"></i> Take Attendance</span></button>
+                            <br>
+
+
+                            <div class="form-group">
+                              <select class="form-control btn-btn-dark submit1  text-white" id="ListOfSubjects" name="CurrentSubject">
+                                <option selected="selected" value="0">Choose Subject</option>
+                                <option value="ETCS-111" id="1" >Computer Networks</option>
+                                <option value="ETCS-210" id="2">DBMS</option>
+                                <option value="ETCS-302" id="3">Compiler Design</option>
+                                <option value="ETCS-303" id="4">Software Engineering</option>
+                                <option value="ETCS-310" id="5">Operating System</option>
+                                <option value="ETCS-410" id="6">Algorithms</option>
+                                <option value="ETCS-510" id="7">Web Technology</option>
+                                <option value="ETCS-303" id="8">Digital Communication</option>
+                              </select>
+                            </div>
+
+
+                            <button class="px-3 btn btn-dark submit" type="button" id="activateme" disabled name="button" onclick="openNav()" ><span style="cursor:pointer"><i class="fas fa-users"></i> Show Presentee</span></button>
+
+                        </form>
+                        <button class="px-5 mt-5 btn btn-dark submit" type="button" id="activatemeto" name="button" disabled  onclick="writingexcel()" ><span style="cursor:pointer"><i class="fas fa-file-excel"></i> Write In Excel</span></button>
+                        <button class="px-5 mt-5 btn btn-dark submit" type="button" name="button"><a style ="text-decoration:none;" class="text-white" href="home.html"><span style="cursor:pointer"><i class="fas fa-file-excel"></i> DASHBOARD</span></a></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main" class="welcome-thumb">
+            <h1 id="present"></h1>
+            <p id="noofpresent" ></p>
+        </div>
+    </section>
+
+
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <ul id="myList"></ul>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

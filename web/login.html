@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LOGIN </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css" />
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark ">
+      <div class="container">
+        <a class="navbar-brand text-white font-weight-bold" href="#"><i class="fab fa-bluetooth"></i> Bluetooth Attendance</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white font-weight-bold" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section style="background-image: url('img/bg-img/welcome-bg.png'); height: 80%; position: relative; background-position: bottom center; background-size: cover;">
+    <div class="container container-wrapper">
+      <div class="form-wrapper">
+        <form name="UserLoginForm" class="form-login" onsubmit="userlogin()">
+          <span class="form-title">
+            LogIn
+          </span>
+
+          <div class="form-group form-input v-input">
+            <input type="text" name="loginfaculty_id" class="form-control login-input" required placeholder="Enter Faculty ID" />
+            <span class="focus"></span>
+          </div>
+          <div class="form-group form-input v-input">
+            <input type="password" name="loginpass" required class="form-control login-input" placeholder="Password" />
+            <span class="focus"></span>
+          </div>
+
+          <div class="form-btn">
+            <button type="button submit"class="login-form-btn">
+                Log IN
+            </button>
+            <span class="focus"></span>
+        </div>
+        <div style="text-align: center; margin-top: 35px;">
+            <a href="signup.html" class="txt hov1">
+                <small>Create account</small>
+            </a>
+        </div>
+        </form>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>

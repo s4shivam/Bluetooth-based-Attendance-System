@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark">
+      <div class="container">
+        <a class="navbar-brand text-white font-weight-bold" href="#"><i class="fab fa-bluetooth-b"></i> Bluetooth Attendance</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white font-weight-bold" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<section style="background-image: url('img/bg-img/welcome-bg.png'); height: 80%; position: relative; background-position: bottom center; background-size: cover;">
+    <div class="container-wrapper" >
+      <div class="form-wrapper">
+        <form name="UserSignupForm" action="login.html" class="form-login" onsubmit="usersignup()">
+          <span class="form-title font-wireght-bold">
+            Sign Up
+          </span>
+
+          <div class="form-group form-input v-input">
+            <input
+              type="text" name="signupfaculty_id"
+              class="form-control login-input"
+              placeholder="Enter FacultyID"
+            />
+            <span class="focus"></span>
+          </div>
+
+          <div class="form-group form-input v-input">
+            <input
+              type="text"
+              name="signupusername"
+              id=""
+              class="form-control login-input"
+              placeholder="Name"
+            />
+            <span class="focus"></span>
+          </div>
+
+          <div class="form-group form-input v-input">
+            <input
+              type="password"
+              name="signuppass"
+              class="form-control login-input"
+              placeholder="Password"
+            />
+            <span class="focus"></span>
+          </div>
+         <div class="form-group form-input v-input ">
+            <select name="Subjects" id="dropdown" class="form-input form-select chosen-select" multiple>
+              <option value="0">Select Subjects</option>
+              <option value="ETCS-310" id="1" >Operating System</option>
+              <option value="ETCS-210" id="2">DBMS</option>
+              <option value="ETCS-410" id="3">Algorithms</option>
+              <option value="ETCS-111" id="4">Computer Networks</option>
+              <option value="ETCS-510" id="5">Web Technology</option>
+              <option value="ETEC-303" id="6">Digital Communication</option>
+              <option value="ETCS-302" id="7">Compiler Design</option>
+              <option value="ETCS-303" id="8">Software Engineering</option>
+
+
+            </select>
+            <span class="focus"></span>
+          </div> 
+          <div class="form-btn">
+            <button type="button submit" class="login-form-btn">
+                Sign UP
+            </button>
+            <span class="focus"></span>
+        </div>
+        <div style="text-align: center; margin-top: 35px;">
+            <a href="login.html" class="txt hov1">
+                <small>Already Have an Account ?</small>
+            </a>
+        </div>
+        </form>
+      </div>
+    </div>
+</section>
+<script>
+  $(".chosen-select").chosen({
+  no_results_text: "Oops, nothing found!"
+})
+</script>
+  </body>
+</html>

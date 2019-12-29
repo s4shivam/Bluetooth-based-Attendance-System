@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Hello, world!</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body onload="SetUserName()">
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand text-white font-weight-bold " href="#"><i class="fab fa-bluetooth"></i> Bluetooth Attendance</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white font-weight-bold" href="#">About</a>
+              </li>
+            </ul>
+            <div class="text-align-right" id="navbarText">
+              <a href="#" id="loggeduser" class="nav-link text-white font-weight-bold"><i class="far fa-user"></i> User</a>
+            </div>
+            <div class="text-align-right" id="navbarText">
+              <a href="#" class="nav-link text-white font-weight-bold" id="dropTable" onclick="dropTable()"><i class="fas fa-sign-out-alt" ></i> Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- <div class="container alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success,</strong> You are now Logged In.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> -->
+      <!-- <div id="main" class="container h-100">
+          <div class="row h-100 align-items-center">
+              <div class="col-12 col-md">
+                  <div class="wellcome-heading">
+                    <h3>Bluetooth</h3>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+    <section class="m-auto p-auto">
+      <div class="row m-auto p-auto">
+        <ul class="caption-style-3">
+          <a href="index.html">
+            <li class="col-lg-3">
+              <img src="https://www.clipartwiki.com/clipimg/detail/204-2045805_students-in-classroom-class-attendance-attendance-icon.png" alt=""/>
+              <div class="caption">
+                <div class="blur"></div>
+                <div class="caption-text">
+                  <h1 class="text-white font-weight-bold">Take Attendance</h1>
+                  <p class="text-white font-weight-bold">Click to mark attendance.</p>
+                </div>
+              </div>
+            </li>
+
+          </a>
+          <li class="col-lg-3">
+            <img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  alt="" />
+            <div class="caption">
+              <div class="blur"></div>
+              <div class="caption-text">
+                <h1>Lorem Ipsum</h1>
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </div>
+          </li>
+          <li class="col-lg-3">
+            <img  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+            <div class="caption">
+              <div class="blur"></div>
+              <div class="caption-text">
+                <h1>Lorem Ipsum</h1>
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="footer">Made with <i class="far fa-heart fa-beat"></i> by <strong>410,402,008</strong>.</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
