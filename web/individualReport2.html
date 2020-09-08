@@ -11,8 +11,14 @@
     <link rel="stylesheet" href="./main.css" />
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!--<style>
+        #myTable{
+            border: 1px solid black;
+        }
+    </style>-->
   </head>
-  <body>
+  <body onload = "viewStudentList()">
     <nav class="navbar navbar-expand-lg bg-dark ">
       <div class="container">
         <a class="navbar-brand text-white font-weight-bold" href="#"><i class="fab fa-bluetooth"></i> Bluetooth Attendance</a>
@@ -25,38 +31,20 @@
               <a class="nav-link text-white font-weight-bold" href="#">About</a>
             </li>
           </ul>
+          <div class="text-align-right" id="navbarText">
+              <a href="individualReport1.html" class="nav-link text-white font-weight-bold mr-5"></i><i class="fas fa-backspace"></i> Back</a>
+            </div>
+            <!-- <div class="text-align-right" id="navbarText">
+              <a href="home.html" class="nav-link text-white font-weight-bold "><i class="fas fa-sign-out-alt"></i> Dashboard</a>
+            </div> -->
         </div>
       </div>
     </nav>
     <section style="background-image: url('img/bg-img/welcome-bg.png'); height: 80%; position: relative; background-position: bottom center; background-size: cover;">
     <div class="container container-wrapper">
       <div class="form-wrapper">
-        <form name="UserLoginForm" class="form-login" onsubmit="userlogin()">
-          <span class="form-title">
-            LogIn
-          </span>
-
-          <div class="form-group form-input v-input">
-            <input type="text" name="loginfaculty_id" class="form-control login-input" required placeholder="Enter Faculty ID" />
-            <span class="focus"></span>
-          </div>
-          <div class="form-group form-input v-input">
-            <input type="password" name="loginpass" required class="form-control login-input" placeholder="Password" />
-            <span class="focus"></span>
-          </div>
-
-          <div class="form-btn">
-            <button type="button submit"class="login-form-btn">
-                Log IN
-            </button>
-            <span class="focus"></span>
-        </div>
-        <div style="text-align: center; margin-top: 35px;">
-            <a href="signup.html" class="txt hov1">
-                <small>Create account <i class="fas fa-user-plus"></i></small>
-            </a>
-        </div>
-        </form>
+        <table id = "myTable" class = "table table-hover">
+        </table>
       </div>
     </div>
     </section>

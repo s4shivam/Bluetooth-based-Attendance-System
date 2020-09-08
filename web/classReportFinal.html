@@ -4,15 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>LOGIN </title>
+    <title>Attendance Sheet</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css" />
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style>
+
+        #tbg{
+          background-color: rgba(103, 160, 105, 0.5 );
+            /* opacity: 0.7; */
+            color: black;
+            overflow-x: scroll;
+        }
+        td{
+          opacity: 1;
+          font-weight: 500;
+        }
+        #mytable {
+          overflow-x: scroll;
+          background-color: red;
+          opacity: 0.1;
+        }
+    </style>
   </head>
-  <body>
+  <body onload = "generateClassReport()">
     <nav class="navbar navbar-expand-lg bg-dark ">
       <div class="container">
         <a class="navbar-brand text-white font-weight-bold" href="#"><i class="fab fa-bluetooth"></i> Bluetooth Attendance</a>
@@ -25,38 +44,37 @@
               <a class="nav-link text-white font-weight-bold" href="#">About</a>
             </li>
           </ul>
+          <div class="text-align-right" id="navbarText">
+              <a href="classreport.html" class="nav-link text-white font-weight-bold "></i> Back</a>
+            </div>
+            <div class="text-align-right" id="navbarText">
+              <a href="home.html" class="nav-link text-white font-weight-bold "><i class="fas fa-sign-out-alt"></i> Dashboard</a>
+            </div>
         </div>
       </div>
     </nav>
     <section style="background-image: url('img/bg-img/welcome-bg.png'); height: 80%; position: relative; background-position: bottom center; background-size: cover;">
-    <div class="container container-wrapper">
-      <div class="form-wrapper">
-        <form name="UserLoginForm" class="form-login" onsubmit="userlogin()">
-          <span class="form-title">
-            LogIn
-          </span>
+    <div class="container">
 
-          <div class="form-group form-input v-input">
-            <input type="text" name="loginfaculty_id" class="form-control login-input" required placeholder="Enter Faculty ID" />
-            <span class="focus"></span>
-          </div>
-          <div class="form-group form-input v-input">
-            <input type="password" name="loginpass" required class="form-control login-input" placeholder="Password" />
-            <span class="focus"></span>
-          </div>
+      <h1 class="p-3 text-light text-monospace"> <u>Attendance Report</u> (<span id="sid"></span>) </h1>
+      <div class="row">
+        <div class="col text-light text-monospace">
+          From Date :<h5 id="fromd" class=" p-2 text-light text-monospace"></h5>
+        </div>
+        <div class="col text-light text-monospace">
+          To date : <h5 id="tod" class=" p-2 text-light text-monospace"></h5>
+        </div>
+      </div>
 
-          <div class="form-btn">
-            <button type="button submit"class="login-form-btn">
-                Log IN
-            </button>
-            <span class="focus"></span>
-        </div>
-        <div style="text-align: center; margin-top: 35px;">
-            <a href="signup.html" class="txt hov1">
-                <small>Create account <i class="fas fa-user-plus"></i></small>
-            </a>
-        </div>
-        </form>
+
+
+
+
+    </div>
+      <div class="container container-wrapper">
+      <div class="container" id="tbg">
+        <table id = "myTable" class = "table table-hover">
+        </table>
       </div>
     </div>
     </section>

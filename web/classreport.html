@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <link href="thedatepicker-master/dist/the-datepicker.css" rel="stylesheet" />
+    <script src="thedatepicker-master/dist/the-datepicker.js"></script>
 
 </head>
 
@@ -52,9 +54,6 @@
                         <form class="form-inline">
                             <!-- <input type="text" id="data" class="form-control email" placeholder="No. of presentees."> -->
                             <!-- <input type="button" class="submit" value="Click to take Attendance." onclick="takeAttendance()"> -->
-                            <button class="px-3 btn btn-dark submit" type="button" id="attend" onclick="takeAttendance()" ><span style="cursor:pointer"><i class="fas fa-address-book"></i> Take Attendance</span></button>
-                            <br>
-
 
                             <div class="form-group">
                               <select class="form-control btn-btn-dark submit1  text-white" id="ListOfSubjects" name="CurrentSubject">
@@ -71,10 +70,11 @@
                             </div>
 
 
-                            <button class="px-3 btn btn-dark submit" type="button" id="activateme" disabled name="button" onclick="openNav()" ><span style="cursor:pointer"><i class="fas fa-users"></i> Show Presentee</span></button>
+                            <input class="px-3 btn btn-dark submit" id = "datepick" type="text" name="StartDate" placeholder="FROM" onclick = "DatePick()" required/>
+                            <input class="px-3 btn btn-dark submit" id = "datepick1" type="text" name="EndDate" placeholder="TO" onclick = "DatePick1()" required/>
 
                         </form>
-                        <button class="px-5 mt-5 btn btn-dark submit" type="button" id="activatemeto" name="button" disabled  onclick="writingexcel()" ><span style="cursor:pointer"><i class="fas fa-file-excel"></i> Write In Excel</span></button>
+                        <button class="px-5 mt-5 btn btn-dark submit" type="button" name="button" onclick="validateRep()" ><span style="cursor:pointer"><i class="fas fa-file-excel"></i> Generate Report</span></button>
                         <button class="px-5 mt-5 btn btn-dark submit" type="button" name="button"><a style ="text-decoration:none;" class="text-white" href="home.html"><span style="cursor:pointer"><i class="fas fa-file-excel"></i> DASHBOARD</span></a></button>
 
                     </div>
@@ -87,17 +87,25 @@
         </div>
     </section>
 
+<script type="text/javascript">
+    
+    function DatePick()
+    {
+    const input = document.getElementById('datepick');
+    const datepicker = new TheDatepicker.Datepicker(input);
+    //datepicker.options.setInputFormat(dateFormat: 'mm/dd/yy');
+    datepicker.render();
+    }   
 
-    <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <ul id="myList"></ul>
-</div>
+    function DatePick1()
+    {
+    const input = document.getElementById('datepick1');
+    const datepicker = new TheDatepicker.Datepicker(input);
+    //datepicker.options.setInputFormat(dateFormat: 'mm/dd/yy');
+    datepicker.render();
+    } 
 
-
-
-
-
-
+</script>
 
 </body>
 </html>
