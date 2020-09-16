@@ -58,4 +58,4 @@ python http://index.py
 
 * **Shivam Agrawal** - - [s4shivam](https://github.com/s4shivam)
 * **Amandeep** - - [AmanDeep9925](https://github.com/AmanDeep9925)
-* **Parminder Singh**
+* **Parminder Singh** - - [parm05091997](https://github.com/parm05091997)
